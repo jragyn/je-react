@@ -1,0 +1,24 @@
+.App-logo {
+  animation: App-logo-spin infinite 6s linear;
+  height: 48px;
+  margin-right: 20px;
+  padding-right: 10px;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  height: 160px;
+  color: white;
+}
+
+.Header-Text {
+  font-family: "Roboto";
+  font-size: x-large;
+  height: 30px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

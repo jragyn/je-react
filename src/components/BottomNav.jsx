@@ -1,0 +1,67 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+import { withStyles } from '@material-ui/core/styles';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import HomeIcon from '@material-ui/icons/Home';
+import VGIcon from '@material-ui/icons/VideogameAsset';
+import DevIcon from '@material-ui/icons/DeveloperMode';
+import MusicIcon from '@material-ui/icons/LibraryMusic';
+import CodeIcon from '@material-ui/icons/Code';
+
+const styles = {
+  root: {
+    width: "100%",
+    bottom: 0,
+    position: "fixed",
+  },
+};
+
+class BottomNav extends React.Component {
+  state = {
+    value: "Home",
+  };
+
+  handleChange = (event, value) => {
+    this.setState({ value });
+    console.log(value);
+    
+  };
+
+  render() {
+    const { classes } = this.props;
+    const { value } = this.state;
+    /*
+    switch (this.state.value) {
+      case 'Home': return <Redirect to='/' />; break;
+      case 'Games': return <Redirect to='/Games' />; break;
+      default: break;
+    };
+    */
+
+    return (
+
+      <BottomNavigation
+        value={value}
+        onChange={this.handleChange}
+        className={classes.root}
+      >
+        <Link exact="true" to="/">
+          <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+        </Link>
+        <BottomNavigationAction label="Games" icon={<VGIcon />} />
+        <BottomNavigationAction label="Projects" icon={<DevIcon />} />
+        <BottomNavigationAction label="RMMV Work" icon={<CodeIcon />} />
+        <BottomNavigationAction label="Music" icon={<MusicIcon />} />
+      </BottomNavigation>
+    );
+  }
+}
+
+BottomNav.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(BottomNav);
