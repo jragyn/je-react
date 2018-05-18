@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Header from './Header';
 import BottomNav from './BottomNav';
-import SideNav from './SideNav';
 import Home from './Home.jsx';
 import Games from './Games.jsx';
 

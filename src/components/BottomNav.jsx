@@ -33,25 +33,10 @@ class BottomNav extends React.Component {
   render() {
     const { classes } = this.props;
     const { value } = this.state;
-    /*
-    switch (this.state.value) {
-      case 'Home': return <Redirect to='/' />; break;
-      case 'Games': return <Redirect to='/Games' />; break;
-      default: break;
-    };
-    */
-
     return (
-
-      <BottomNavigation
-        value={value}
-        onChange={this.handleChange}
-        className={classes.root}
-      >
-        <Link exact="true" to="/">
-          <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        </Link>
-        <BottomNavigationAction label="Games" icon={<VGIcon />} />
+      <BottomNavigation value={value} onChange={this.handleChange} className={classes.root} >
+        <BottomNavigationAction component={Link} exact="true" to="/" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction component={Link} to="/Games" label="Games" icon={<VGIcon />} />
         <BottomNavigationAction label="Projects" icon={<DevIcon />} />
         <BottomNavigationAction label="RMMV Work" icon={<CodeIcon />} />
         <BottomNavigationAction label="Music" icon={<MusicIcon />} />
