@@ -35,11 +35,11 @@ class BottomNav extends React.Component {
     const { value } = this.state;
     return (
       <BottomNavigation value={value} onChange={this.handleChange} className={classes.root} >
-        <BottomNavigationAction component={Link} exact="true" to="/" label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction component={Link} to="/Games" label="Games" icon={<VGIcon />} />
-        <BottomNavigationAction label="Projects" icon={<DevIcon />} />
-        <BottomNavigationAction label="RMMV Work" icon={<CodeIcon />} />
-        <BottomNavigationAction label="Music" icon={<MusicIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/Home" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/Games" label="Games" icon={<VGIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/Projects" label="Projects" icon={<DevIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/Rmmv" label="RMMV" icon={<CodeIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/Music" label="Music" icon={<MusicIcon />} />
       </BottomNavigation>
     );
   }

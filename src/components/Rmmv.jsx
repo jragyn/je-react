@@ -6,9 +6,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Sandbox from '../vanilla/Sandbox';
-//import BirbQuiz from '../vanilla/gameBirbQuiz';
-//import Clicker from '../vanilla/gameClicker';
 
 const styles = {
   card: {
@@ -23,7 +20,7 @@ const styles = {
   },
 };
 
-function GamesCard(props) {
+function RmmvCard(props) {
   const { classes } = props;
 
   return (
@@ -31,23 +28,23 @@ function GamesCard(props) {
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="headline" color="primary" align="center" gutterBottom>
-            Games
+            RMMV Work
           </Typography>
           <Typography variant="body2" color="default" >
-            Stuff about raw JS canvas games i made.
+            Stuff and stuff about RMMV, see github. 
+            https://github.com/jragyn/CAEX
           </Typography>
         </CardContent>
         <CardActions>
           <Button size="large">Learn More</Button>
         </CardActions>
-        <Sandbox />
       </Card>
     </div>
   );
 }
 
-GamesCard.propTypes = {
+RmmvCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(GamesCard);
+export default withStyles(styles)(RmmvCard);

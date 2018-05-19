@@ -6,9 +6,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Sandbox from '../vanilla/Sandbox';
-//import BirbQuiz from '../vanilla/gameBirbQuiz';
-//import Clicker from '../vanilla/gameClicker';
 
 const styles = {
   card: {
@@ -23,7 +20,7 @@ const styles = {
   },
 };
 
-function GamesCard(props) {
+function ProjectsCard(props) {
   const { classes } = props;
 
   return (
@@ -31,23 +28,22 @@ function GamesCard(props) {
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="headline" color="primary" align="center" gutterBottom>
-            Games
+            Projects and stuff I've worked on
           </Typography>
           <Typography variant="body2" color="default" >
-            Stuff about raw JS canvas games i made.
+            asdf
           </Typography>
         </CardContent>
         <CardActions>
           <Button size="large">Learn More</Button>
         </CardActions>
-        <Sandbox />
       </Card>
     </div>
   );
 }
 
-GamesCard.propTypes = {
+ProjectsCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(GamesCard);
+export default withStyles(styles)(ProjectsCard);
