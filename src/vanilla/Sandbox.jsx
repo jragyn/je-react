@@ -13,7 +13,7 @@ class Sandbox extends React.Component {
     }
 
     componentWillUnmount() {
-      document.removeEventListener("nv-enter", this.handleInput);
+      document.removeEventListener("click", this.handleInput);
     }
 
     handleInput = () => {
