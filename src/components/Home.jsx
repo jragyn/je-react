@@ -6,6 +6,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip';
+import OCRimg from '../assets/ocrIcon.png';
 
 const styles = {
   card: {
@@ -28,19 +30,28 @@ function HomeCard(props) {
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="headline" color="primary" align="center" gutterBottom>
-            Welcome to the Home Page
+            Welcome Home!
           </Typography>
-          <Typography variant="body2" color="default" >
-          It is my github dumpster of stuff I've done or made.
+          <Typography variant="caption" color="textSecondary" align="center" gutterBottom>
+            The home of my personal stuff and things
+          </Typography>
+          <Typography variant="body2" color="default" paragraph>
+          It is my github dumpster of stuff I've done or made.<br/>
           Mostly it'll just contain my creations/expressions as far as
           coding and such is concerned, like the "clicker" or "sandbox"
-          seen in the NAV. Use the NAV on the right to play around with
-          either of the games. They will run side-by-side, even while not
-          open so you can go freely between them.
+          listed under the Games tab on the bottomNav.
+          </Typography>
+          <Typography variant="body1" color="default" >
+            The music is all from OverClocked Remix, feel free to visit
+            them by clicking the OCR button below if you enjoy their music.
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="large">Learn More</Button>
+          <Tooltip title="OverClocked ReMix - Video Game Music Community">
+            <Button size="large" href="http://ocremix.org" target="_blank">
+              <img src={OCRimg} alt="the link for OCremix" />
+            </Button>
+          </Tooltip>
         </CardActions>
       </Card>
     </div>

@@ -6,10 +6,9 @@ import { withStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@material-ui/icons/Home';
-import VGIcon from '@material-ui/icons/VideogameAsset';
+import AboutIcon from '@material-ui/icons/HelpOutline';
 import DevIcon from '@material-ui/icons/DeveloperMode';
-import MusicIcon from '@material-ui/icons/LibraryMusic';
-import CodeIcon from '@material-ui/icons/Code';
+import VGIcon from '@material-ui/icons/VideogameAsset';
 
 const styles = {
   root: {
@@ -26,8 +25,6 @@ class BottomNav extends React.Component {
 
   handleChange = (event, value) => {
     this.setState({ value });
-    console.log(value);
-    
   };
 
   render() {
@@ -36,10 +33,9 @@ class BottomNav extends React.Component {
     return (
       <BottomNavigation value={value} onChange={this.handleChange} className={classes.root} >
         <BottomNavigationAction component={Link} to="/je-react/Home" label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction component={Link} to="/je-react/Games" label="Games" icon={<VGIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/About" label="About" icon={<AboutIcon />} />
         <BottomNavigationAction component={Link} to="/je-react/Projects" label="Projects" icon={<DevIcon />} />
-        <BottomNavigationAction component={Link} to="/je-react/Rmmv" label="RMMV" icon={<CodeIcon />} />
-        <BottomNavigationAction component={Link} to="/je-react/Music" label="Music" icon={<MusicIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/Rmmv" label="RMMV" icon={<VGIcon />} />
       </BottomNavigation>
     );
   }
