@@ -2,7 +2,7 @@
 //-------------------------------------------------------------------------//
 //  Encapsulates the canvas game into this function.
 //-------------------------------------------------------------------------//
-(function gameSandbox() {
+const foo = (function gameSandbox() {
 "use strict"; var then = Date.now();
 document.getElementById("versionSandbox").innerHTML += "0.1";
 // ====================================================================================//
@@ -616,3 +616,4 @@ document.getElementById("versionSandbox").innerHTML += "0.1";
 	}//end-main
 
 })();
+export default foo;
