@@ -4,10 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
-import Avatar from '@material-ui/core/Avatar';
 
 import ProfileImage from './About_ProfileImage';
 import Skills from './About_Skills';

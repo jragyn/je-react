@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 
 import ItsaMe from '../assets/je_230817.jpg';
@@ -19,16 +18,13 @@ const styles = {
 };
 
 class AboutProfileImage extends React.Component {
-
-  render() {
-    return (
+  render() { return (
       <div>
         <Paper style={styles.base}>
             <img src={ItsaMe} alt="its a me" style={styles.pic} />
         </Paper>
       </div>
-    );
-  };
+  )};
 }
 
 export default AboutProfileImage;

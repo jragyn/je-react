@@ -24,8 +24,8 @@ document.getElementById("versionSandbox").innerHTML += "0.1";
              
   // input-handling variables
 	var keysDown = {};
-	addEventListener("keydown", function(e) { keysDown[e.keyCode] = true; }, false);
-	addEventListener("keyup", function(e) {	delete keysDown[e.keyCode];	}, false);
+	addEventListener("keydown", function(e) { keysDown[e.keyCode] = true; }, false); // eslint-disable-line no-restricted-globals
+	addEventListener("keyup", function(e) {	delete keysDown[e.keyCode];	}, false); // eslint-disable-line no-restricted-globals
 
   // Global object for creating characters of any kind.
   function GameObject(spd, gfx, hp, dmg) {

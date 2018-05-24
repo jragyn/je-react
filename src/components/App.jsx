@@ -16,7 +16,7 @@ class App extends Component {
       <Router><div>
         <CssBaseline />
         <Header />
-        <Route exact path="/je-react/Home" component={Home}/>
+        <Route exact path="/je-react/" component={Home}/>
         <Route exact path="/je-react/About" component={About}/>
         <Route exact path="/je-react/Projects" component={Projects}/>
         <Route exact path="/je-react/Rmmv" component={Rmmv}/>

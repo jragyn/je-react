@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+
 // material-ui components
   import PropTypes from 'prop-types';
   import { withStyles } from '@material-ui/core/styles';
@@ -8,6 +10,9 @@ import React from 'react';
   import CardActions from '@material-ui/core/CardActions';
   import Button from '@material-ui/core/Button';
 
+// my components
+  import Script from 'react-load-script'
+  
 const styles = {
   card: {
     minWidth: 275,
@@ -21,34 +26,40 @@ const styles = {
   },
 };
 
-function _PersonalProjects(props) {
-  const { classes } = props;
+class _PersonalProjects extends React.Component {
 
-  return (
-    <div>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography variant="headline" color="primary" align="center" gutterBottom>
-            Personal Card stuff
-          </Typography>
-          <Typography variant="subheading" color="default" >
-            Stuff about raw JS canvas games i made.
-          </Typography>
-          <Typography variant="caption" color="default" >
-            Currently, the way my original games were designed in HTML5 and vanilla JS,
-            porting is a WIP. Due: soon(tm).
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="large" color="secondary" href="http://jje.surge.sh" target="_blank">My Original Site</Button>
-        </CardActions>
-      </Card>
-    </div>
-  );
+  componentDidMount = () => {
+    ReactDOM.render(<Script url="http://jje.surge.sh/js/gameSandbox.js"/>, document.getElementById('dummy4script'));
+  }
+
+  render() {
+    return (
+      <div>
+        <Card className={styles.card}>
+          <CardContent>
+            <Typography variant="headline" color="primary" align="center" gutterBottom>
+              Personal Card stuff
+            </Typography>
+            <Typography variant="subheading" color="default" >
+              Stuff about raw JS canvas games i made.
+            </Typography>
+            <div id="dummy4script" />
+            <div id="versionSandbox" />
+            <div id="hookSandBox" />
+
+            <Typography variant="caption" color="default" >
+              Currently, the way my original games were designed in HTML5 and vanilla JS,
+              porting is a WIP. Due: soon(tm).
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="large" color="secondary" href="http://jje.surge.sh" target="_blank">My Original Site</Button>
+          </CardActions>
+        </Card>
+      </div>
+    );
+  }
+
 }
 
-_PersonalProjects.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(_PersonalProjects);
+export default (_PersonalProjects);

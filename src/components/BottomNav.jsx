@@ -20,7 +20,7 @@ const styles = {
 
 class BottomNav extends React.Component {
   state = {
-    value: "Home",
+    value: "",
   };
 
   handleChange = (event, value) => {
@@ -32,7 +32,7 @@ class BottomNav extends React.Component {
     const { value } = this.state;
     return (
       <BottomNavigation value={value} onChange={this.handleChange} className={classes.root} >
-        <BottomNavigationAction component={Link} to="/je-react/Home" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction component={Link} to="/je-react/" label="Home" icon={<HomeIcon />} />
         <BottomNavigationAction component={Link} to="/je-react/About" label="About" icon={<AboutIcon />} />
         <BottomNavigationAction component={Link} to="/je-react/Projects" label="Projects" icon={<DevIcon />} />
         <BottomNavigationAction component={Link} to="/je-react/Rmmv" label="RMMV" icon={<VGIcon />} />
