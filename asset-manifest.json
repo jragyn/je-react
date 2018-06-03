@@ -1,9 +1,20 @@
 {
   "main.css": "static/css/main.6d4ee4d2.css",
   "main.css.map": "static/css/main.6d4ee4d2.css.map",
-  "main.js": "static/js/main.f8b41341.js",
-  "main.js.map": "static/js/main.f8b41341.js.map",
+  "main.js": "static/js/main.ec6ef19e.js",
+  "main.js.map": "static/js/main.ec6ef19e.js.map",
+  "static/media/base.png": "static/media/base.2af7f0f9.png",
+  "static/media/caex.png": "static/media/caex.5da91606.png",
+  "static/media/cdm.png": "static/media/cdm.a385c91b.png",
+  "static/media/diff.png": "static/media/diff.5848a16a.png",
+  "static/media/drops.png": "static/media/drops.f3ffddda.png",
   "static/media/fez.jpg": "static/media/fez.dae83382.jpg",
+  "static/media/hud.png": "static/media/hud.5f881c6a.png",
+  "static/media/hud_time.png": "static/media/hud_time.774caeae.png",
   "static/media/je_230817.jpg": "static/media/je_230817.b2378180.jpg",
-  "static/media/logo.svg": "static/media/logo.e38ccfc7.svg"
+  "static/media/logo.svg": "static/media/logo.e38ccfc7.svg",
+  "static/media/parlim.png": "static/media/parlim.e949d10a.png",
+  "static/media/reequip.png": "static/media/reequip.0c20c2a7.png",
+  "static/media/restatus.png": "static/media/restatus.1f55d9c1.png",
+  "static/media/rw.png": "static/media/rw.0b983ba8.png"
 }
