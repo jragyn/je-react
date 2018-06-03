@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.6d4ee4d2.css",
   "main.css.map": "static/css/main.6d4ee4d2.css.map",
-  "main.js": "static/js/main.ec6ef19e.js",
-  "main.js.map": "static/js/main.ec6ef19e.js.map",
+  "main.js": "static/js/main.5ff663af.js",
+  "main.js.map": "static/js/main.5ff663af.js.map",
   "static/media/base.png": "static/media/base.2af7f0f9.png",
   "static/media/caex.png": "static/media/caex.5da91606.png",
   "static/media/cdm.png": "static/media/cdm.a385c91b.png",
@@ -13,8 +13,11 @@
   "static/media/hud_time.png": "static/media/hud_time.774caeae.png",
   "static/media/je_230817.jpg": "static/media/je_230817.b2378180.jpg",
   "static/media/logo.svg": "static/media/logo.e38ccfc7.svg",
+  "static/media/mp_IntenseColor.mp3": "static/media/mp_IntenseColor.7bca9e0d.mp3",
   "static/media/parlim.png": "static/media/parlim.e949d10a.png",
   "static/media/reequip.png": "static/media/reequip.0c20c2a7.png",
   "static/media/restatus.png": "static/media/restatus.1f55d9c1.png",
-  "static/media/rw.png": "static/media/rw.0b983ba8.png"
+  "static/media/rw.png": "static/media/rw.0b983ba8.png",
+  "static/media/sm64_FleetingEcstasy.mp3": "static/media/sm64_FleetingEcstasy.ab83b1c8.mp3",
+  "static/media/smw2_PlasticSmile.mp3": "static/media/smw2_PlasticSmile.2527121a.mp3"
 }
