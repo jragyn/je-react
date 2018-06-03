@@ -21,7 +21,7 @@ class HeaderBar extends React.Component {
   state = {
     anchorEl: null,
     selectedIndex: 1,
-    currentSong: "/music/smw2_PlasticSmile.mp3",
+    currentSong: "smw2_PlasticSmile.mp3",
   };
 
   handleClose = () => { this.setState({ anchorEl: null }); };
@@ -38,13 +38,13 @@ class HeaderBar extends React.Component {
     var src = options[index];
     switch (src) {
       case "SMW2: Plastic Smile":
-        this.setState({currentSong: "/music/smw2_PlasticSmile.mp3"});
+        this.setState({currentSong: "smw2_PlasticSmile.mp3"});
         break;
       case "MP: Intense Color":
-        this.setState({currentSong: "/music/mp_IntenseColor.mp3"}); 
+        this.setState({currentSong: "mp_IntenseColor.mp3"}); 
         break;
       case "SM64: Fleeting Ecstacy": 
-        this.setState({currentSong: "/music/sm64_FleetingEcstasy.mp3"}); 
+        this.setState({currentSong: "sm64_FleetingEcstasy.mp3"}); 
         break;
       default: break;
     }
@@ -85,7 +85,11 @@ class HeaderBar extends React.Component {
               </MenuItem>
             ))}
             </Menu>
-            <ReactAudioPlayer src={this.state.currentSong} controls controlsList="nodownload"/>
+            <ReactAudioPlayer
+              src={require('../assets/music/' + this.state.currentSong)} 
+              controls 
+              controlsList="nodownload"
+            />
           </Toolbar>
         </AppBar>
   
