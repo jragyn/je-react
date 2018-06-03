@@ -21,7 +21,7 @@ class HeaderBar extends React.Component {
   state = {
     anchorEl: null,
     selectedIndex: 1,
-    currentSong: "/media/smw2_PlasticSmile.mp3",
+    currentSong: "/music/smw2_PlasticSmile.mp3",
   };
 
   handleClose = () => { this.setState({ anchorEl: null }); };
@@ -30,7 +30,6 @@ class HeaderBar extends React.Component {
   
   handleMenuItemClick = (event, index) => {
     this.setState({ selectedIndex: index, anchorEl: null });
-    console.log(index);
     this.changeSong(index);
   };
 
@@ -38,12 +37,17 @@ class HeaderBar extends React.Component {
   changeSong = (index) => {
     var src = options[index];
     switch (src) {
-      case "SMW2: Plastic Smile": this.setState({currentSong: "/media/smw2_PlasticSmile.mp3"}); break;
-      case "MP: Intense Color": this.setState({currentSong: "/media/mp_IntenseColor.mp3"}); break;
-      case "SM64: Fleeting Ecstacy": this.setState({currentSong: "/media/sm64_FleetingEcstasy.mp3"}); break;
+      case "SMW2: Plastic Smile":
+        this.setState({currentSong: "/music/smw2_PlasticSmile.mp3"});
+        break;
+      case "MP: Intense Color":
+        this.setState({currentSong: "/music/mp_IntenseColor.mp3"}); 
+        break;
+      case "SM64: Fleeting Ecstacy": 
+        this.setState({currentSong: "/music/sm64_FleetingEcstasy.mp3"}); 
+        break;
       default: break;
     }
-    console.log(this.state.currentSong);
   };
 
   render() {

@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+
+import RmmvCAEX from './Rmmv_CAEX';
+import RmmvPlugins from './Rmmv_Plugins';
 
 const styles = {
   card: {
     minWidth: 275,
+    margin: 10,
+    padding: 5,
   },
   title: {
     marginBottom: 16,
@@ -18,33 +18,32 @@ const styles = {
   pos: {
     marginBottom: 12,
   },
+  media: {
+    height: 0,
+    paddingTop: '30%',
+    border: '1px solid black'
+  },
+  innerCard: {
+    margin: 10,
+    padding: 10,
+  }
 };
 
-function RmmvCard(props) {
-  const { classes } = props;
+class RmmvPage extends React.Component {
 
-  return (
-    <div>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography variant="headline" color="primary" align="center" gutterBottom>
-            RMMV Work
-          </Typography>
-          <Typography variant="body2" color="default" >
-            Stuff and stuff about RMMV, see github. 
-            https://github.com/jragyn/CAEX
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="large">Learn More</Button>
-        </CardActions>
-      </Card>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <RmmvCAEX />
+        <RmmvPlugins />
+      </div>
+    );
+  }
+
 }
 
-RmmvCard.propTypes = {
+RmmvPage.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(RmmvCard);
+export default withStyles(styles)(RmmvPage);
