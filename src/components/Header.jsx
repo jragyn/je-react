@@ -15,6 +15,7 @@ const options = [
   'SMW2: Plastic Smile',
   'MP: Intense Color',
   'SM64: Fleeting Ecstacy',
+  'Geom: Endless Challenge',
 ];
 
 class HeaderBar extends React.Component {
@@ -41,10 +42,13 @@ class HeaderBar extends React.Component {
         this.setState({currentSong: "smw2_PlasticSmile.mp3"});
         break;
       case "MP: Intense Color":
-        this.setState({currentSong: "mp_IntenseColor.mp3"}); 
+        this.setState({currentSong: "mp_IntenseColor.mp3"});
         break;
       case "SM64: Fleeting Ecstacy": 
-        this.setState({currentSong: "sm64_FleetingEcstasy.mp3"}); 
+        this.setState({currentSong: "sm64_FleetingEcstasy.mp3"});
+        break;
+      case "Geom: Endless Challenge": 
+        this.setState({currentSong: "geom_Endless.mp3"});
         break;
       default: break;
     }
