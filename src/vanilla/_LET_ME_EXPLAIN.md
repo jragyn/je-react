@@ -1,0 +1,3 @@
+# the files in this folder are all just copies of my original raw javascript code that I used for my html5/css/js website. They are being kept on here as a reference point, so I can quickly go back and forth, and have no active role in this website as of now.
+
+## in the future, I do plan on implementing all three in ReactJS, somehow...
