@@ -9,6 +9,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import AboutIcon from '@material-ui/icons/HelpOutline';
 import DevIcon from '@material-ui/icons/DeveloperMode';
 import VGIcon from '@material-ui/icons/VideogameAsset';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const styles = {
   root: {
@@ -31,11 +32,19 @@ class BottomNav extends React.Component {
     const { classes } = this.props;
     const { value } = this.state;
     return (
-      <BottomNavigation value={value} onChange={this.handleChange} className={classes.root} >
-        <BottomNavigationAction component={Link} to="/je-react/" label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction component={Link} to="/je-react/About" label="About" icon={<AboutIcon />} />
-        <BottomNavigationAction component={Link} to="/je-react/Projects" label="Projects" icon={<DevIcon />} />
-        <BottomNavigationAction component={Link} to="/je-react/Rmmv" label="RMMV" icon={<VGIcon />} />
+      <BottomNavigation value={value} onChange={this.handleChange} className={classes.root}>
+        <Tooltip title="Home" placement="top">
+          <BottomNavigationAction component={Link} to="/je-react/" label="Home" icon={<HomeIcon />} />
+        </Tooltip>
+        <Tooltip title="About" placement="top">
+          <BottomNavigationAction component={Link} to="/je-react/About" label="About" icon={<AboutIcon />} />
+        </Tooltip>
+        <Tooltip title="Projects" placement="top">
+          <BottomNavigationAction component={Link} to="/je-react/Projects" label="Projects" icon={<DevIcon />} />
+        </Tooltip>
+        <Tooltip title="RMMV" placement="top">
+          <BottomNavigationAction component={Link} to="/je-react/Rmmv" label="RMMV" icon={<VGIcon />} />
+        </Tooltip>
       </BottomNavigation>
     );
   }

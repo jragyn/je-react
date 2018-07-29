@@ -1,7 +1,7 @@
+// react components
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+// material-ui components
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -17,7 +17,6 @@ import CodeIcon from '@material-ui/icons/Code';
 const styles = {
   card: {
     minWidth: 275,
-    margin: 10,
     padding: 5,
   },
   title: {
@@ -179,7 +178,7 @@ const plugins = {
   },
 };
 
-class RmmvPlugins extends React.Component {
+export default class RmmvPlugins extends React.Component {
 
   componentDidMount() {
     this.makePluginCards();
@@ -196,7 +195,7 @@ class RmmvPlugins extends React.Component {
       reactPlugins.push(
         <Card style={styles.innerCard} key={keyCounter}>
           <CardMedia 
-            image={require('../rmmvShots/' + plugins[key].pic)} 
+            image={require('../../rmmvShots/' + plugins[key].pic)} 
             title="cover image" 
             style={styles.media}
           />
@@ -251,11 +250,4 @@ class RmmvPlugins extends React.Component {
       </div>
     );
   }
-
 }
-
-RmmvPlugins.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(RmmvPlugins);

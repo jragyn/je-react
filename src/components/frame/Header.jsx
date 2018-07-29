@@ -1,4 +1,6 @@
+// react components
 import React from 'react';
+// material-ui components
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -6,10 +8,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import MusicIcon from '@material-ui/icons/LibraryMusic';
-
-import logo from '../assets/logo.svg';
-import '../styles/Header.css';
+// personal components
 import ReactAudioPlayer from 'react-audio-player';
+import logo from '../../assets/logo.svg';
+import '../../styles/Header.css';
 
 const options = [
   'SMW2: Plastic Smile',
@@ -18,12 +20,15 @@ const options = [
   'Geom: Endless Challenge',
 ];
 
-class HeaderBar extends React.Component {
-  state = {
-    anchorEl: null,
-    selectedIndex: 1,
-    currentSong: "smw2_PlasticSmile.mp3",
-  };
+export default class HeaderBar extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      anchorEl: null,
+      selectedIndex: 1,
+      currentSong: "smw2_PlasticSmile.mp3",
+    };
+  }
 
   handleClose = () => { this.setState({ anchorEl: null }); };
 
@@ -33,7 +38,6 @@ class HeaderBar extends React.Component {
     this.setState({ selectedIndex: index, anchorEl: null });
     this.changeSong(index);
   };
-
 
   changeSong = (index) => {
     var src = options[index];
@@ -62,16 +66,12 @@ class HeaderBar extends React.Component {
         <AppBar position="static" color="primary">
           <Toolbar>
           <img src={logo} className="App-logo" alt="logo"  />
-            <Typography variant="title" color="inherit">
-              JE Webworks
-            </Typography>  
-          </Toolbar>
-          <Toolbar>
+            <Typography variant="title" color="inherit" style={{ flex: 1 }}>JE Webworks</Typography>
             <IconButton
               onClick={this.handleMenu}
               color="inherit"
             >
-              <MusicIcon />
+            <MusicIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -90,16 +90,13 @@ class HeaderBar extends React.Component {
             ))}
             </Menu>
             <ReactAudioPlayer
-              src={require('../assets/music/' + this.state.currentSong)} 
+              src={require('../../assets/music/' + this.state.currentSong)} 
               controls 
               controlsList="nodownload"
             />
           </Toolbar>
         </AppBar>
-  
       </div>
     );
   }
 }
-
-export default HeaderBar;

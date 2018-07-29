@@ -3,12 +3,12 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import Header from './Header';
-import BottomNav from './BottomNav';
+import Header from './frame/Header';
+import BottomNav from './frame/BottomNav';
 import Home from './Home';
-import About from './About';
-import Projects from './Projects';
-import Rmmv from './Rmmv';
+import About from './about/About';
+import Projects from './projects/Projects';
+import Rmmv from './rmmv/Rmmv';
 
 class App extends Component {
   render() {

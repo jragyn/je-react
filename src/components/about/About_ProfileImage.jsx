@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 
-import ItsaMe from '../assets/je_230817.jpg';
+import ItsaMe from '../../assets/je_230817.jpg';
 
 const styles = {
   base: {
@@ -17,7 +17,7 @@ const styles = {
   }
 };
 
-class AboutProfileImage extends React.Component {
+export default class AboutProfileImage extends React.Component {
   render() { return (
       <div>
         <Paper style={styles.base}>
@@ -26,5 +26,3 @@ class AboutProfileImage extends React.Component {
       </div>
   )};
 }
-
-export default AboutProfileImage;
