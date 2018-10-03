@@ -101,7 +101,6 @@ class GitLookup extends Component {
         })
         .catch(function(ex) {
           that.setState(msg => "An error occured?!");
-          that.queryIPgithub();
         });
     };
 

@@ -63,7 +63,7 @@ export default class HeaderBar extends React.Component {
 
     return (
       <div>
-        <AppBar position="static" color="primary">
+        <AppBar position="static" color="primary" styles={{ position:"fixed" }}>
           <Toolbar>
           <img src={logo} className="App-logo" alt="logo"  />
             <Typography variant="title" color="inherit" style={{ flex: 1 }}>JE Webworks</Typography>

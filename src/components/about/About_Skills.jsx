@@ -18,13 +18,14 @@ const styles = {
 export default class AboutSkillsChips extends React.Component {
   state = {
     chipData: [
-      {key: 0, label: 'ReactJS', avatar: 'JS'},
-      {key: 1, label: '.NET Core', avatar: 'C#', url: "http://jje-api.azurewebsites.net/you/win"},
-      {key: 2, label: 'PIXI', avatar: 'JS'},
+      {key: 0, label: 'ReactJS', avatar: 'JS', url: ''},
+      {key: 1, label: '.NET Core', avatar: 'C#', url: ''},
+      {key: 2, label: 'PIXI', avatar: 'JS', url: ''},
       {key: 3, label: 'Ruby', avatar: '.rb', url: 'https://pastebin.com/3rWZFbKU'},
       {key: 4, label: 'Database Management', avatar: 'SQL', url: 'http://ffexdb.azurewebsites.net/'},
       {key: 5, label: 'Cloud Data', avatar: 'Data', url: 'http://ffexdb.azurewebsites.net/'},
-      {key: 6, label: 'nodeJS', avatar: 'JS', url: 'http://52.42.202.204:1337/foo'},
+      {key: 6, label: 'nodeJS', avatar: 'JS', url: ''},
+      {key: 7, label: 'Angular', avatar: 'g', url: ''}
     ],
   };
 

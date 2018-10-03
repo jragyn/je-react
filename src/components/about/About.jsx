@@ -13,6 +13,8 @@ import WorkStory from './About_WorkStory';
 const styles = {
   card: {
     minWidth: 275,
+    maxWidth: 600,
+    float: "left"
   },
   btn: {
     width: 360,

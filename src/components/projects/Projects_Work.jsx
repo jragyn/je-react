@@ -33,6 +33,10 @@ export default class _WorkProjects extends React.Component {
               into a lovely new ReactJS front-end with ASP .NET Core back-end, with all the original SQL/LINQ querying functionality,
               and more!
             </Typography>
+            <Typography variant="body1">
+              This transformation includes working on not just the front-end, but also writing web services
+              and additional communication from front-to-back to gather data and present.
+            </Typography>
           </CardContent>
         </Card>
       </div>

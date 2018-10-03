@@ -37,7 +37,6 @@ export default class _PersonalProjects extends React.Component {
             <Button size="large" color="secondary" href="http://jje.surge.sh" target="_blank">My Original Site</Button>
           </CardActions>
         </Card>
-        <Weather />
       </div>
     );
   }

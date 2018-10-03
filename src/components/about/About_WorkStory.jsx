@@ -14,10 +14,16 @@ import _History from './_WorkHistory';
 const styles = {
   card: {
     minWidth: 275,
+    float: "right",
+  },
+  innerCard: {
+    padding: 20,
+
   },
   list: {
     flexWrap: 'nowrap',
     transform: 'translateZ(0)',
+    height: 350
   }
 };
 
@@ -31,7 +37,7 @@ export default class AboutWorkStory extends React.Component {
     let workList = [];
     Object.keys(_History).forEach((el) => {
       workList.push(
-        <GridListTile key={_History[el].company} cols={1}>
+        <Card style={styles.innerCard}>
           <Typography variant="headline">
           <a href={_History[el].url} target="_blank">{_History[el].company}</a>
           </Typography>
@@ -41,10 +47,7 @@ export default class AboutWorkStory extends React.Component {
           <Typography variant="body1">
           {_History[el].details}
           </Typography>
-          <br/>
-          <Divider />
-          <br/>
-        </GridListTile>
+        </Card>
       );
     })
     ReactDOM.render(workList, document.getElementById('listOfWork'));
@@ -54,11 +57,7 @@ export default class AboutWorkStory extends React.Component {
     return (
       <div>
         <Card>
-          <CardContent>
-            <GridList cellHeight={200} cols={1} style={styles.list}>
-              <div id="listOfWork"/>
-            </GridList>
-          </CardContent>
+          <div id="listOfWork"/>
         </Card>
       </div>
     )

@@ -16,11 +16,11 @@ class App extends Component {
       <Router><div>
         <CssBaseline />
         <Header />
+        <BottomNav />
         <Route exact path="/je-react/" component={Home}/>
         <Route exact path="/je-react/About" component={About}/>
         <Route exact path="/je-react/Projects" component={Projects}/>
         <Route exact path="/je-react/Rmmv" component={Rmmv}/>
-        <BottomNav />
       </div></Router>
     );
   }

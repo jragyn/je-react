@@ -31,7 +31,6 @@ export default class _SchoolProjects extends React.Component {
             </Typography>
           </CardContent>
         </Card>
-        <GitLookup />
       </div>
     );
   }
